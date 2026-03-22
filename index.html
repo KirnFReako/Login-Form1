@@ -4,19 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg,black,grey);
+        }
+        .Login-container{
+            background-color: rgb(212, 199, 199);
+            padding: 40px;
+            border-radius: 12px;
+            width: 420px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .Login-container h2{
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .input-group{
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .input-group label{
+            font-size: 14px;
+            color: #555;
+        }
+        .input-group input{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid black;
+            border-radius: 6px;
+            outline: none;
+            transition: 0.3s;
+        }
+        .input-group input:focus{
+            border-color:#667eea;
+            box-shadow: 0 0 5px rgba(102,126,234,0.5);
+
+        }
+            .Login-btn{
+            width: 100%;
+        padding: 10px;
+        border: none;
+        background: #667eea;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+        }
+        .Login-btn:hover {
+      background: #5a67d8;
+    }
+
+    .extra-links {
+      margin-top: 15px;
+      font-size: 13px;
+    }
+
+    .extra-links a {
+      color: #667eea;
+      text-decoration: none;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
+    </style>
 </head>
 
 <body>
-    <h1> Student Registration Form</h1>
-    <table align="center">
-        <tr>
-            <td><label for="firstname">First Name</label></td>
-            <td> <input type="text" placeholder="Enter your name" name="firstname" id="firstname"></td>
-        </tr>
+    <div class="Login-container">
+        <h2>Login</h2>
+        <form >
+            <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Enter you email" required>
+        </div>
 
-    </table>
+        <div class="input-group">
+            <label >Password</label>
+            <input type="password" placeholder="Enter your Password" required>
+        </div>
+        <button class="Login-btn">Login</button>
 
+        <div class="extra-links">
+            <p><a href="#">Forgot Password</a></p>
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+        </form>
+
+    </div>
 
 
 </body>
